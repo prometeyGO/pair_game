@@ -1,0 +1,200 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #1c1632;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 50px 75px;
+  margin: 0 auto;
+}
+
+.game__title {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+.game__start {
+  margin: 0 auto;
+  padding: 30px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 200px;
+  border-radius: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(0.01%, rgba(0, 0, 0, 0)), to(rgba(215, 84, 51, 0.15))), #42327e;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0.01%, rgba(215, 84, 51, 0.15) 100%), #42327e;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0.01%, rgba(215, 84, 51, 0.15) 100%), #42327e;
+}
+
+.start__label {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: white;
+}
+
+.start__input {
+  margin-bottom: 30px;
+  height: 30px;
+  width: 300px;
+  background-color: #d9d9d9;
+  opacity: 0.2;
+  border-radius: 5px;
+}
+
+.start__btn {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  background: -o-linear-gradient(353.75deg, rgba(215, 84, 51, 0.35) 33.33%, rgba(255, 0, 0, 0.35) 71.7%), #d75433;
+  background: linear-gradient(96.25deg, rgba(215, 84, 51, 0.35) 33.33%, rgba(255, 0, 0, 0.35) 71.7%), #d75433;
+  color: white;
+  cursor: pointer;
+}
+
+.start__btn:active {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.game__wrap {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.game__card {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 160px;
+  height: 180px;
+  background-color: #42327e;
+  color: transparent;
+  border-radius: 15px;
+  font-size: 70px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.game__card.open {
+ background-color: #d75433;
+ color: white;
+ -webkit-transform: rotateY(180deg);
+         transform: rotateY(180deg);
+}
+
+.game__card.success {
+  background-color: #1b8d08;
+  color: aliceblue;
+}
+
+.card__number {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.card__number::-moz-selection {
+  opacity: 0;
+}
+
+.card__number::selection {
+  opacity: 0;
+}
+
+.card__number.open {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  opacity: 1;
+}
+
+.game__end {
+  margin: 0 auto;
+  padding: 30px 15px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 200px;
+  border-radius: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(0.01%, rgba(0, 0, 0, 0)), to(rgba(215, 84, 51, 0.15))), #42327e;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0.01%, rgba(215, 84, 51, 0.15) 100%), #42327e;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0.01%, rgba(215, 84, 51, 0.15) 100%), #42327e;
+}
+
+.end__text {
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 15px;
+  color: white;
+}
+
+.end__btn {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  background: -o-linear-gradient(353.75deg, rgba(215, 84, 51, 0.35) 33.33%, rgba(255, 0, 0, 0.35) 71.7%), #d75433;
+  background: linear-gradient(96.25deg, rgba(215, 84, 51, 0.35) 33.33%, rgba(255, 0, 0, 0.35) 71.7%), #d75433;
+  color: white;
+  cursor: pointer;
+}

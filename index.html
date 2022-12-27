@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пары</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./card.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="game__title">Найди пару</h1>
+
+    <div class="game__start">
+      <label class="start__label" for="start">Введите количество игровых карточек (от 4 до 20)</label>
+      <input class="start__input" type="number" name="start" min="4" max="20">
+
+      <button class="start__btn">Начать игру</button>
+    </div>
+
+    <div class="game__wrap" id="game__wrap">
+    </div>
+
+    <div class="game__end">
+      <p class="end__text">Поздравляем! Вы выиграли!</p>
+
+      <button class="end__btn">Начать новую игру</button>
+    </div>
+  </div>
+</body>
+</html>
